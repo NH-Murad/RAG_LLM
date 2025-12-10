@@ -1,0 +1,73 @@
+# ------------------------------
+# Python bytecode / cache
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# ------------------------------
+# Virtual environments
+# ------------------------------
+venv/
+.env/
+.venv/
+rag_env/
+env/
+ENV/
+
+# ------------------------------
+# OS / Editor junk
+# ------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ------------------------------
+# Logs and runtime files
+# ------------------------------
+logs/
+*.log
+
+# ------------------------------
+# Data: results and temp files
+# (keep code + configs, ignore heavy outputs)
+# ------------------------------
+data/results/
+data/tmp/
+data/cache/
+
+# If you want to ignore *all* docs, uncomment this:
+# data/documents/*
+
+# ------------------------------
+# Model / cache directories (if ever inside repo)
+# ------------------------------
+.checkpoints/
+.cache/
+.huggingface/
+wandb/
+
+# ------------------------------
+# Build / dist (if you package)
+# ------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ------------------------------
+# Misc
+# ------------------------------
+*.swp
+*.swo

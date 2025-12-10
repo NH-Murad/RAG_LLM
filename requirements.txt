@@ -1,0 +1,44 @@
+# Requirements for RAG Hallucination Detection System
+
+# Core Deep Learning & NLP
+torch==2.1.0
+transformers==4.36.0
+sentence-transformers==2.2.2
+
+# Vector Search & Retrieval
+faiss-cpu==1.7.4
+numpy==1.24.3
+scipy==1.11.0
+
+# Web Interface
+gradio==4.26.0
+
+# Data Processing
+pandas==2.1.1
+scikit-learn==1.3.2
+
+# Utilities
+requests==2.31.0
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Hallucination Detection (Optional but Recommended)
+lettucedetect==0.1.0
+
+# Optional: For better PDF support
+PyPDF2==3.0.1
+
+# Development
+tqdm==4.66.1
+colorama==0.4.6
+
+# For visualization (optional)
+matplotlib==3.8.0
+seaborn==0.13.0
+
+# For export functionality
+openpyxl==3.1.0
+
+# Testing (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1

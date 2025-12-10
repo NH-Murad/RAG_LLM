@@ -1,0 +1,37 @@
+# Configuration for RAG Hallucination Detection System
+
+# Ollama LLM Configuration
+ollama_model: phi  # Options: phi (2.7B, fastest), mistral (7B, better quality)
+ollama_temperature: 0.7
+ollama_max_length: 512
+
+# Embedding Model Configuration
+embedding_model: all-MiniLM-L6-v2  # Lightweight (33M params)
+embedding_batch_size: 32
+
+# RAG Configuration
+chunk_size: 256  # Words per chunk
+chunk_overlap: 50  # Overlap words between chunks
+top_k_retrieval: 3  # Number of documents to retrieve
+similarity_threshold: 0.3
+
+# Hallucination Detection Configuration
+detection_method: lettucedetect  # Options: lettucedetect, luna, keyword
+detection_confidence_threshold: 0.5
+
+# Application Configuration
+max_document_size: 5000000  # Max bytes per document
+max_total_documents: 100
+cache_embeddings: true
+log_level: INFO
+
+# Performance Optimization
+use_gpu: false  # Set to true if you have NVIDIA GPU
+num_threads: 4
+batch_processing: true
+lazy_loading: true
+
+# Output Configuration
+export_format: csv  # Options: csv, json, excel
+include_timestamps: true
+include_metadata: true
