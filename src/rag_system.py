@@ -152,7 +152,7 @@ Answer:"""
                     "stream": False,
                     "temperature": self.temperature,
                 },
-                timeout=60
+                timeout=120
             )
             
             if response.status_code == 200:
@@ -190,7 +190,11 @@ Context:
 Question: {query}
 
 Answer (based only on the provided context):"""
-            
+            prompt += (
+    "\n\nAnswer concisely. Use only the information in the context. "
+    "Keep the answer under 10 short sentences."
+            )
+
             response = requests.post(
                 f"{self.ollama_base_url}/api/generate",
                 json={
@@ -199,7 +203,7 @@ Answer (based only on the provided context):"""
                     "stream": False,
                     "temperature": self.temperature,
                 },
-                timeout=60
+                timeout=120
             )
             
             if response.status_code == 200:
